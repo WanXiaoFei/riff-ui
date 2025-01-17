@@ -5,6 +5,9 @@
     "main": "index.js",
     "license": "ISC",
     "dependencies": {
-        "@riff-ui/components": "workspace:*"
+        "@riff-ui/components": "workspace:*",
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/vue-fontawesome": "^3.0.8"
     }
 }

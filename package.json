@@ -30,14 +30,17 @@
         "vue-tsc": "^1.8.27"
     },
     "dependencies": {
-        "lodash-es": "^4.17.21",
-        "vue": "^3.4.19",
-        "riff-ui": "workspace:*",
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/vue-fontawesome": "^3.0.8",
         "@riff-ui/components": "workspace:*",
         "@riff-ui/hooks": "workspace:*",
+        "@riff-ui/locale": "workspace:*",
         "@riff-ui/theme": "workspace:*",
         "@riff-ui/utils": "workspace:*",
-        "@riff-ui/locale": "workspace:*"
+        "lodash-es": "^4.17.21",
+        "riff-ui": "workspace:*",
+        "vue": "^3.4.19"
     },
     "publishConfig": {
         "access": "public"

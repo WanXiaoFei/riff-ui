@@ -5,6 +5,8 @@
     --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
 
     --r-border-color: #dcdfe6;
+    --r-border-color-light: #e4e7ed;
+    --r-border-color-lighter: #ebeef5;
 
     --r-text-color-primary: #303133;
     --r-text-color-regular: #606266;

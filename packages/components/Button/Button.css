@@ -4,6 +4,10 @@
     --r-button-border-color: var(--r-border-color);
     --r-button-text-color: var(--r-text-color-regular);
 
+    --r-button-disabled-text-color: var(--r-text-color-disabled);
+    --r-button-disabled-bg-color: var(--r-fill-color-blank);
+    --r-button-disabled-border-color: var(--r-border-color-light);
+
     --r-button-hover-text-color: var(--r-color-primary);
     --r-button-hover-bg-color: var(--r-color-primary-light-9);
     --r-button-hover-border-color: var(--r-color-primary-light-7);
@@ -72,6 +76,19 @@
         border-radius: 50%;
         padding: 8px;
     }
+
+    /* is-disabled */
+    &.is-loading,
+    &.is-disabled,
+    &.is-disabled:hover,
+    &[disabled],
+    &[disabled]:hover {
+        color: var(--r-button-disabled-text-color);
+        cursor: not-allowed;
+        background-image: none;
+        background-color: var(--r-button-disabled-bg-color);
+        border-color: var(--r-button-disabled-border-color);
+    }
 }
 
 @each $val in primary, success, warning, info, danger {
@@ -79,24 +96,63 @@
         --r-button-text-color: var(--r-color-white);
         --r-button-bg-color: var(--r-color-$(val));
         --r-button-border-color: var(--r-color-$(val));
+
         --r-button-hover-text-color: var(--r-color-white);
         --r-button-hover-bg-color: var(--r-color-$(val)-light-3);
         --r-button-hover-border-color: var(--r-color-$(val)-light-3);
+
         --r-button-active-bg-color: var(--r-color-$(val)-dark-2);
         --r-button-active-border-color: var(--r-color-$(val)-dark-2);
+
+        --r-button-disabled-text-color: var(--r-color-white);
+        --r-button-disabled-bg-color: var(--r-color-$(val)-light-5);
+        --r-button-disabled-border-color: var(--r-color-$(val)-light-5);
     }
 
     .r-button--$(val).is-plain {
         --r-button-text-color: var(--r-color-$(val));
         --r-button-bg-color: var(--r-color-$(val)-light-9);
         --r-button-border-color: var(--r-color-$(val)-light-5);
+
         --r-button-hover-text-color: var(--r-color-white);
         --r-button-hover-bg-color: var(--r-color-$(val));
         --r-button-hover-border-color: var(--r-color-$(val));
+
         --r-button-active-text-color: var(--r-color-white);
     
         --r-button-disabled-text-color: var(--r-color-$(val)-light-5);
         --r-button-disabled-bg-color: var(--r-color-$(val)-light-9);
         --r-button-disabled-border-color: var(--r-color-$(val)-light-8);
       }
+}
+
+.r-button--large {
+    --r-button-size: 40px;
+    height: var(--r-button-size);
+    padding: 12px 19px;
+    font-size: var(--r-font-size-base);
+    border-radius: var(--r-border-radius-base);
+    
+    /*circle*/
+    &.is-circle {
+        border-radius: 50%;
+        padding: 12px;
+    }
+}
+.r-button--small {
+    --r-button-size: 24px;
+    height: var(--r-button-size);
+    padding: 5px 11px;
+    font-size: 12px;
+    border-radius: calc(var(--r-border-radius-base) - 1px);
+
+    /*circle*/
+    &.is-circle {
+        border-radius: 50%;
+        padding: 5px;
+    }
+    [class*='r-icon'] {
+        width: 12px;
+        height: 12px;
+    }
 }

@@ -13,6 +13,10 @@ const meta: Meta<typeof RButton> = {
             control: { type: 'select' },
             options: ['button', 'a', 'div'],
         },
+        size: {
+            control: { type: 'select' },
+            options: ['small', 'medium', 'large'],
+        },
         type: {
             control: { type: 'select' },
             options: ['default', 'primary', 'success', 'danger', 'warning', 'info'],
@@ -36,6 +40,12 @@ const meta: Meta<typeof RButton> = {
         loading: {
             control: { type: 'boolean' },
         },
+        loadingIcon: {
+            control: { type: 'text' },
+        },
+        icon: {
+            control: { type: 'text' },
+        },
     }
 }
 
@@ -51,6 +61,7 @@ export const Default: Story & {args: {content: string}} = {
     },
     args: {
         type: 'primary',
+        size: 'medium',
         content: 'Button',
         nativeType: 'button',
         plain: false,
@@ -58,6 +69,8 @@ export const Default: Story & {args: {content: string}} = {
         circle: false,
         disabled: false,
         loading: false,
+        loadingIcon: 'spinner',
+        icon: '',
     },
     render: (args) => ({
         components: {
