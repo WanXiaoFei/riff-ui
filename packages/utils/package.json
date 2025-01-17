@@ -1,7 +1,5 @@
 {
     "name": "@riff-ui/utils",
     "version": "1.0.0",
-    "description": "Riff UI Components",
-    "main": "index.js",
-    "license": "ISC"
+    "main": "index.js"
 }

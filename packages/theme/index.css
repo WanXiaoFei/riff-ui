@@ -1,1 +1,39 @@
 @import './reset.css';
+
+:root {
+    --r-color-white: #ffffff;
+    --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+
+    --r-border-color: #dcdfe6;
+
+    --r-text-color-primary: #303133;
+    --r-text-color-regular: #606266;
+    --r-text-color-secondary: #909399;
+    --r-text-color-placeholder: #a8abb2;
+    --r-text-color-disabled: #c0c4cc;
+
+    --r-fill-color-blank: #ffffff;
+
+    @each $val, $color in var(--colors) {
+        --r-color-$(val): $(color);
+        @for $i from 3 to 9 {
+          --r-color-$(val)-light-$(i): mix(#fff, $(color), 0.$(i));
+        }
+        --r-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+    }
+
+    /* border */
+    --r-border-width: 1px;
+    --r-border-style: solid;
+    --r-border: var(--r-border-width) var(--r-border-style) var(--r-border-color);
+    --r-border-radius-base: 4px;
+    --r-border-radius-small: 2px;
+    --r-border-radius-round: 20px;
+    --r-border-radius-circle: 100%;
+
+    /*font*/
+    --r-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+    --r-font-weight-primary: 500;
+    --r-font-size-base: 14px;
+}

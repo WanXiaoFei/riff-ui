@@ -1,7 +1,5 @@
 {
     "name": "@riff-ui/theme",
     "version": "1.0.0",
-    "description": "Riff UI Components",
-    "main": "index.css",
-    "license": "ISC"
+    "main": "index.css"
 }

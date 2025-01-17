@@ -4,6 +4,9 @@
     "description": "Riff UI Components",
     "main": "index.js",
     "license": "ISC",
+    "scripts": {
+        "test": "vitest"
+    },
     "devDependencies": {
         "@vitest/coverage-v8": "^1.4.0",
         "@vue/test-utils": "^2.4.5",
